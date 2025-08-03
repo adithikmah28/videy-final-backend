@@ -7,7 +7,7 @@ const app = express();
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SECRET_KEY);
 
 // Konfigurasi CORS: Hanya izinkan permintaan dari URL frontend Anda
-app.use(cors({ origin: process.env.FRONTEND_URL }));
+app.use(cors());
 app.use(express.json());
 
 // --- API ENDPOINTS ---
